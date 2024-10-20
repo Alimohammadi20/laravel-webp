@@ -2,9 +2,9 @@
 
 namespace Alimi7372\WebpConvertor;
 
-use Alimi7372\WebpConvertor\WebpService;
 use Alimi7372\WebpConvertor\Facades\WebpConvertor;
 use Illuminate\Foundation\AliasLoader;
+use Illuminate\Http\UploadedFile;
 use Illuminate\Support\ServiceProvider;
 
 class WebpServiceProvider extends ServiceProvider
@@ -29,5 +29,12 @@ class WebpServiceProvider extends ServiceProvider
         $this->publishes([
             __DIR__ . '/../config/webp.php' => config_path('webp.php'),
         ], 'webpconvert::config');
+
+
+        UploadedFile::macro('toWebp', function ( string $output, int $quality = 80) {
+            $imagePath = $this->getRealPath();
+            return convert_to_webp($imagePath, $output, $quality);
+        });
+
     }
 }
