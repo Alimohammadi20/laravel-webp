@@ -11,6 +11,6 @@ if (! function_exists('convert_to_webp')) {
      */
     function convert_to_webp(string $imagePath, string $outputPath, int $quality = 75)
     {
-        app('webp')->convert($imagePath, $outputPath, $quality);
+        return app('webp')->convert($imagePath, $outputPath, $quality);
     }
 }
