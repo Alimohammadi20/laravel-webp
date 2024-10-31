@@ -28,7 +28,10 @@ class WebpService
     {
         $image = Image::make($imagePath);
         $image->encode('webp', $quality);
-        mkdir(dirname($outputPath),777,true);
+        $dirname = dirname($outputPath);
+        if (is_dir($dirname)){
+            mkdir($dirname,777,true);
+        }
         $image->save($outputPath);
         return $outputPath;
     }
