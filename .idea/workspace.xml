@@ -4,12 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f60d944f-d990-4819-9857-06c7cde7e677" name="Changes" comment="fixed :intervention:image downgrade to 2.5">
+    <list default="true" id="f60d944f-d990-4819-9857-06c7cde7e677" name="Changes" comment="feature: add laravel 11 support">
       <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/phpspec.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/phpspec.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_10_18_2024_1_39_PM_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_10_18_2024_1_39_PM_[Changes]1/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_10_18_2024_1_39_PM__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_10_18_2024_1_39_PM__Changes_1.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/WebpService.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/WebpService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/helpers.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/helpers.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,15 +25,41 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
+  </component>
+  <component name="GitToolBoxStore">
+    <option name="recentBranches">
+      <RecentBranches>
+        <option name="branchesForRepo">
+          <list>
+            <RecentBranchesForRepo>
+              <option name="branches">
+                <list>
+                  <RecentBranch>
+                    <option name="branchName" value="v1.1" />
+                    <option name="lastUsedInstant" value="1731395183" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="main" />
+                    <option name="lastUsedInstant" value="1731395173" />
+                  </RecentBranch>
+                </list>
+              </option>
+              <option name="repositoryRootUrl" value="file://$PROJECT_DIR$" />
+            </RecentBranchesForRepo>
+          </list>
+        </option>
+      </RecentBranches>
+    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 7.4">
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="/bin/php">
     <include_path>
       <path value="$PROJECT_DIR$/vendor/composer" />
       <path value="$PROJECT_DIR$/vendor/intervention/gif" />
@@ -156,6 +184,7 @@
       <path value="$PROJECT_DIR$/vendor/doctrine/lexer" />
       <path value="$PROJECT_DIR$/vendor/nunomaduro/collision" />
       <path value="$PROJECT_DIR$/vendor/filp/whoops" />
+      <path value="$PROJECT_DIR$/vendor/_laravel_idea" />
     </include_path>
   </component>
   <component name="ProjectColorInfo">{
@@ -167,23 +196,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.laravel-idea.search-composer-json&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.laravel-idea.update-module-directories&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/xampp/htdocs/WebpConvertor/src&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.laravel-idea.search-composer-json": "true",
+    "RunOnceActivity.laravel-idea.update-module-directories": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "v1.1",
+    "last_opened_file_path": "/home/ali-mohammadi/Desktop/Projects/Laravel/laravel-webp",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\WebpConvertor\src" />
@@ -198,7 +228,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-php-predefined-ba97393d7c68-6f8e3395a2b4-com.jetbrains.php.sharedIndexes-PS-233.15619.9" />
+        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-PS-242.23726.107" />
+        <option value="bundled-php-predefined-a98d8de5180a-90914f2295cb-com.jetbrains.php.sharedIndexes-PS-242.23726.107" />
       </set>
     </attachedChunks>
   </component>
@@ -217,7 +248,13 @@
       <workItem from="1729280943488" duration="1200000" />
       <workItem from="1729424773990" duration="833000" />
       <workItem from="1729425759886" duration="732000" />
-      <workItem from="1729427147668" duration="747000" />
+      <workItem from="1729427147668" duration="1237000" />
+      <workItem from="1729428471067" duration="199000" />
+      <workItem from="1729428693089" duration="2257000" />
+      <workItem from="1729489847872" duration="263000" />
+      <workItem from="1729491518020" duration="68000" />
+      <workItem from="1731140354711" duration="2390000" />
+      <workItem from="1731394668399" duration="2313000" />
     </task>
     <task id="LOCAL-00001" summary="fixed :intervention:image downgrade to 2.5">
       <option name="closed" value="true" />
@@ -227,7 +264,55 @@
       <option name="project" value="LOCAL" />
       <updated>1729425380954</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="fixed : compatible with version intervention 2.5">
+      <option name="closed" value="true" />
+      <created>1729428048353</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1729428048353</updated>
+    </task>
+    <task id="LOCAL-00003" summary="feature: use on UploadedFile instance with method toWebp">
+      <option name="closed" value="true" />
+      <created>1729430986053</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1729430986053</updated>
+    </task>
+    <task id="LOCAL-00004" summary="feature: support illuminate/support version 11">
+      <option name="closed" value="true" />
+      <created>1731140392137</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1731140392137</updated>
+    </task>
+    <task id="LOCAL-00005" summary="feature: support illuminate/support version 11">
+      <option name="closed" value="true" />
+      <created>1731140663022</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1731140663022</updated>
+    </task>
+    <task id="LOCAL-00006" summary="fix: composer">
+      <option name="closed" value="true" />
+      <created>1731394876347</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1731394876347</updated>
+    </task>
+    <task id="LOCAL-00007" summary="feature: add laravel 11 support">
+      <option name="closed" value="true" />
+      <created>1731395189779</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1731395189780</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -246,6 +331,11 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="fixed :intervention:image downgrade to 2.5" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed :intervention:image downgrade to 2.5" />
+    <MESSAGE value="fixed : compatible with version intervention 2.5" />
+    <MESSAGE value="feature: use on UploadedFile instance with method toWebp" />
+    <MESSAGE value="feature: support illuminate/support version 11" />
+    <MESSAGE value="fix: composer" />
+    <MESSAGE value="feature: add laravel 11 support" />
+    <option name="LAST_COMMIT_MESSAGE" value="feature: add laravel 11 support" />
   </component>
 </project>

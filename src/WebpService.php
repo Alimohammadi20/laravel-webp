@@ -2,8 +2,10 @@
 
 namespace Alimi7372\WebpConvertor;
 
+use Exception;
 use Intervention\Image\ImageManager;
-use Intervention\Image\Facades\Image;
+use Intervention\Image\Drivers\Gd\Driver as DGDriver;
+use Intervention\Image\Drivers\Imagick\Driver as ImagickDriver;
 
 class WebpService
 {
@@ -11,26 +13,27 @@ class WebpService
     private ImageManager $imageManager;
 
     /**
-     * @throws \Exception
+     * @throws Exception
      */
     public function __construct()
     {
         if (class_exists('Imagick')) {
-            $diver = 'imagick';
+            $driver = ImagickDriver::class;
         } elseif (function_exists('gd_info')) {
-            $diver ='gd';
+            $driver = DGDriver::class;
         } else {
-            throw new \Exception('The selected image driver is not installed or valid.');
+            throw new Exception('The selected image driver is not installed or valid.');
         }
-        $this->imageManager = new ImageManager(['diver'=>$diver]);
+        $this->imageManager = new ImageManager($driver);
     }
-    public function convert($imagePath, $outputPath, $quality = 75)
+
+    public function convert($imagePath, $outputPath, $quality = 75): string
     {
-        $image = Image::make($imagePath);
-        $image->encode('webp', $quality);
+        $image = $this->imageManager->read($imagePath);
+        $image->toWebp($quality);
         $dirname = dirname($outputPath);
-        if (!is_dir($dirname)){
-            mkdir($dirname,777,true);
+        if (!is_dir($dirname)) {
+            mkdir($dirname, 777, true);
         }
         $image->save($outputPath);
         return $outputPath;
